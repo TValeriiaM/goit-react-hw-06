@@ -3,7 +3,7 @@ import contactsArr from "../../contacts.json";
 
 const contactsSlice = createSlice({
   name: "contacts",
-  initialState: contactsArr,
+  initialState: { items: contactsArr },
   reducers: {
     addContact: (state, action) => {
       state.items.push(action.payload);

@@ -7,7 +7,7 @@ export default function SearchBox() {
   const dispatch = useDispatch();
   const filter = useSelector(selectNameFilter);
   const handleSearch = (event) => {
-    dispatch(changeFilter(event.target.value));
+    dispatch(changeFilter(event.target.value.trim()));
   };
 
   return (
@@ -18,6 +18,7 @@ export default function SearchBox() {
         type="text"
         value={filter}
         onChange={handleSearch}
+        id = "searchBox"
       />
     </div>
   );
